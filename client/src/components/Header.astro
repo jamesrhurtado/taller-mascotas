@@ -1,5 +1,6 @@
 ---
 // Import any necessary dependencies
+import ThemeSelector from './ThemeSelector.svelte';
 ---
 
 <header class="bg-blue-500 dark:bg-blue-700 text-white p-4 shadow-md transition-colors duration-300">
@@ -19,6 +20,9 @@
         </nav>
       </div>
       <h1 class="text-xl font-bold"><a href="/" class="hover:underline">Tailspin Shelter</a></h1>
+    </div>
+    <div class="theme-selector-wrapper" style="z-index: 100;">
+      <ThemeSelector client:only="svelte" />
     </div>
   </div>
 </header>

@@ -1,0 +1,441 @@
+/* Theme Styles */
+
+/* Default Theme styles - these are already in the app */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  /* Define theme-specific CSS variables */
+  --background-color: #0f172a; /* slate-900 */
+  --text-color: #ffffff;
+  --header-bg: #3b82f6; /* blue-500 */
+  --header-dark-bg: #1d4ed8; /* blue-700 */
+  --card-bg: #1e293b; /* slate-800 */
+  --card-hover-bg: #334155; /* slate-700 */
+  --primary-color: #3b82f6; /* blue-500 */
+  --secondary-color: #8b5cf6; /* violet-500 */
+  --accent-color: #f97316; /* orange-500 */
+  
+  /* Dropdown variables */
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #000000;
+  --dropdown-hover-bg: rgba(0, 0, 0, 0.05);
+  --dropdown-active-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== 80s RETRO THEME ==================== */
+html.eighties-retro {
+  --font-sans: 'VT323', 'Press Start 2P', monospace;
+  --background-color: #0c0030;
+  --text-color: #ffffff;
+  --header-bg: #ff00ff;
+  --header-dark-bg: #cc00cc;
+  --card-bg: #000066;
+  --card-hover-bg: #000099;
+  --primary-color: #00ffff;
+  --secondary-color: #ff00ff;
+  --accent-color: #ffff00;
+  
+  /* Dropdown variables */
+  --dropdown-bg: #0c0030;
+  --dropdown-text: #00ffff;
+  --dropdown-hover-bg: rgba(255, 0, 255, 0.2);
+  --dropdown-active-bg: rgba(255, 0, 255, 0.4);
+}
+
+html.eighties-retro body {
+  background: linear-gradient(to bottom, #0c0030, #0c0060);
+  background-image: 
+    linear-gradient(to right, rgba(255, 0, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+  text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #00ffff;
+}
+
+html.eighties-retro h1, 
+html.eighties-retro h2,
+html.eighties-retro h3 {
+  color: #ff00ff;
+  text-shadow: 2px 2px 0 #00ffff, -2px -2px 0 #ffff00;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+html.eighties-retro .card {
+  border: 3px solid #ff00ff;
+  box-shadow: 5px 5px 0 #00ffff;
+  transition: all 0.2s;
+}
+
+html.eighties-retro .card:hover {
+  transform: translateX(-5px) translateY(-5px);
+  box-shadow: 10px 10px 0 #00ffff;
+}
+
+html.eighties-retro button:not(.theme-button):not(.theme-option) {
+  background: linear-gradient(to right, #ff00ff, #00ffff);
+  color: black;
+  font-weight: bold;
+  border: 2px solid white;
+  text-shadow: none;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+
+html.eighties-retro button:not(.theme-button):not(.theme-option):hover {
+  transform: translateX(-2px) translateY(-2px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* ==================== TERMINAL CLASSIC THEME ==================== */
+html.terminal-classic {
+  --font-sans: 'Courier New', monospace;
+  --background-color: #000000;
+  --text-color: #00ff00;
+  --header-bg: #000000;
+  --header-dark-bg: #000000;
+  --card-bg: #000000;
+  --card-hover-bg: #001100;
+  --primary-color: #00ff00;
+  --secondary-color: #00cc00;
+  --accent-color: #33ff33;
+  
+  /* Dropdown variables */
+  --dropdown-bg: #000000;
+  --dropdown-text: #00ff00;
+  --dropdown-hover-bg: #001100;
+  --dropdown-active-bg: #002200;
+}
+
+html.terminal-classic body {
+  background-color: black;
+  background-image: linear-gradient(transparent 50%, rgba(0, 255, 0, 0.05) 50%);
+  background-size: 100% 4px;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  font-family: 'Courier New', monospace;
+  position: relative;
+}
+
+html.terminal-classic body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 2;
+}
+
+html.terminal-classic body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 15, 0, 0.3) 90%,
+    rgba(0, 30, 0, 0.5) 100%
+  );
+  z-index: 3;
+}
+
+html.terminal-classic h1,
+html.terminal-classic h2,
+html.terminal-classic h3 {
+  color: #33ff33;
+}
+
+html.terminal-classic header {
+  border-bottom: 1px solid #00ff00;
+}
+
+html.terminal-classic .card {
+  border: 1px solid #00ff00;
+  background-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+html.terminal-classic button:not(.theme-button):not(.theme-option) {
+  background-color: #000000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+}
+
+html.terminal-classic button:not(.theme-button):not(.theme-option):hover {
+  background-color: #003300;
+}
+
+/* ==================== HAND-SKETCHED THEME ==================== */
+html.hand-sketched {
+  --font-sans: 'Comic Sans MS', 'Comic Neue', cursive;
+  --background-color: #f8f8f8;
+  --text-color: #333333;
+  --header-bg: #ffffff;
+  --header-dark-bg: #f0f0f0;
+  --card-bg: #ffffff;
+  --card-hover-bg: #f0f0f0;
+  --primary-color: #6b7280;
+  --secondary-color: #4b5563;
+  --accent-color: #ff6b6b;
+  
+  /* Dropdown variables */
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #333333;
+  --dropdown-hover-bg: #f0f0f0;
+  --dropdown-active-bg: #e0e0e0;
+}
+
+html.hand-sketched body {
+  background-color: #f8f8f8;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+html.hand-sketched h1, 
+html.hand-sketched h2,
+html.hand-sketched h3 {
+  color: #333;
+  font-family: 'Indie Flower', 'Comic Sans MS', cursive;
+}
+
+html.hand-sketched header {
+  background-color: white;
+  border-bottom: 3px solid #333;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1);
+  color: #333;
+}
+
+html.hand-sketched .card {
+  background-color: white;
+  border: 2px dashed #666;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 #ddd;
+  position: relative;
+}
+
+html.hand-sketched button:not(.theme-button):not(.theme-option) {
+  background-color: white;
+  color: #333;
+  border: 2px dashed #666;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 #ddd;
+  font-family: 'Comic Sans MS', 'Comic Neue', cursive;
+}
+
+html.hand-sketched button:not(.theme-button):not(.theme-option):hover {
+  background-color: #f0f0f0;
+  box-shadow: 3px 3px 0 #ccc;
+  transform: translate(-1px, -1px);
+}
+
+/* ==================== STEAMPUNK THEME ==================== */
+html.steampunk {
+  --font-sans: 'Goudy Old Style', 'Times New Roman', serif;
+  --background-color: #2c2418;
+  --text-color: #d2a04a;
+  --header-bg: #3e2723;
+  --header-dark-bg: #271512;
+  --card-bg: #3e2723;
+  --card-hover-bg: #4e3229;
+  --primary-color: #d2a04a;
+  --secondary-color: #9e6e2c;
+  --accent-color: #ff8f00;
+  
+  /* Dropdown variables */
+  --dropdown-bg: #3e2723;
+  --dropdown-text: #d2a04a;
+  --dropdown-hover-bg: #4e3229;
+  --dropdown-active-bg: #5e3c2f;
+}
+
+html.steampunk body {
+  background-color: #2c2418;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zm-24.596 0l-5.485 5.486 1.414 1.414 7.9-7.9h-2.83zm16.97 0l-7.071 7.07-1.414-1.414L33.284 0h2.83zm-9.9 0l-7.071 7.07-1.414-1.415L24.3 0h2.83zm26.599 0L33.97 12.313l-1.414-1.414L43.97 0h2.83zm-35.227 0L3.657 14.142l1.414 1.414L22.313 0h2.83zM52.87 0L40.558 12.313l-1.414-1.414L50.385 0h2.83zM22.313 0L0 22.313l1.414 1.414L23.728 0h-1.415zm30.283 0L29.9 22.696l-1.414-1.414L52.87 0h-1.414zm-7.071 0L19.757 25.77l-1.414-1.414L43.97 0h1.414zM16.97 0L0 16.97l1.414 1.415L18.385 0H16.97zm9.9 0L8.485 18.385 9.9 19.8 28.284 0h-1.414zM31.314 0L12.93 18.385l1.414 1.414L32.727 0h-1.414zM45.556 0L27.172 18.385l1.414 1.414L46.97 0h-1.414zM44.142 0L26.93 17.214l1.414 1.414L45.557 0h-1.414zm-18.385 0L7.544 18.214l1.415 1.414L27.172 0h-1.415zM34.242 0L18.214 16.028 19.63 17.44 35.657 0h-1.415zM39.9 0L24.1 15.8l1.414 1.413L41.313 0H39.9zm-15.556 0L8.485 15.858 9.9 17.272 25.757 0H24.34zM30.728 0L16.97 13.757l1.415 1.414L32.14 0h-1.414zM9.9 0L0 9.9l1.414 1.414L11.313 0H9.9zm5.657 0L0 15.556l1.414 1.414L17.07 0h-1.414zM20.485 0L0 20.485l1.414 1.414L21.9 0h-1.414zM5.657 0L0 5.657l1.414 1.414L7.07 0H5.658zM23.728 0L0 23.73 1.414 25.14 25.14 0h-1.414zM49.8 0c-.553 0-1.1.214-1.516.63L0 48.114l1.414 1.414L50.214 1.414c.943-.943.832-2.430-.357-3c-.03-.014-.066-.02-.1-.033-.24-.09-.487-.144-.743-.144zm-21.656 0c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2zm-8.485 0c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2zM54.627 5.373l.83.828-1.415 1.415-1.242-1.242 1.827-1zm-8.556 0l.828.83L45.484 7.6l-1.243-1.243 1.83-1zM19.8 5.373l1.242 1.242-1.414 1.415-1.243-1.243 1.415-1.414zM8.9 5.373l1.242 1.242-1.414 1.415L7.485 6.8 8.9 5.373zm37.485.828c-.553 0-1.1.214-1.516.63L0 51.714 1.414 53.13 46.8 7.745c.943-.943.832-2.43-.357-3-.03-.014-.066-.02-.1-.033-.24-.09-.487-.144-.743-.144zm-35.798 0c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2zm21.656 0c-1.105 0-2 .896-2 2s.895 2 2 2 2-.896 2-2-.895-2-2-2zm10.243 29.9c-1.106 0-2 .894-2 2s.894 2 2 2 2-.894 2-2-.894-2-2-2zm-5.658 0c-1.105 0-2 .894-2 2s.895 2 2 2 2-.894 2-2-.895-2-2-2zm-12.727 0c-1.106 0-2 .894-2 2s.894 2 2 2 2-.894 2-2-.894-2-2-2zm-10.244 0c-1.105 0-2 .894-2 2s.895 2 2 2 2-.894 2-2-.895-2-2-2zm26.213 0c-1.105 0-2 .894-2 2s.895 2 2 2 2-.894 2-2-.895-2-2-2z' fill='%23d2a04a' fill-opacity='0.15' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+html.steampunk h1,
+html.steampunk h2,
+html.steampunk h3 {
+  color: #d2a04a;
+  font-family: 'Goudy Old Style', 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+html.steampunk header {
+  background-color: #3e2723;
+  border-bottom: 3px solid #d2a04a;
+  color: #d2a04a;
+}
+
+html.steampunk .card {
+  background-color: #3e2723;
+  border: 2px solid #d2a04a;
+  border-radius: 0;
+  box-shadow: 
+    0 0 0 2px #3e2723,
+    inset 0 0 0 1px #d2a04a;
+  position: relative;
+}
+
+html.steampunk .card::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid rgba(210, 160, 74, 0.3);
+  pointer-events: none;
+}
+
+html.steampunk button:not(.theme-button):not(.theme-option) {
+  background-color: #3e2723;
+  color: #d2a04a;
+  border: 2px solid #d2a04a;
+  font-family: 'Goudy Old Style', 'Times New Roman', serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+html.steampunk button:not(.theme-button):not(.theme-option)::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  border: 1px solid rgba(210, 160, 74, 0.3);
+  pointer-events: none;
+}
+
+html.steampunk button:not(.theme-button):not(.theme-option):hover {
+  background-color: #4e3229;
+}
+
+/* ==================== FANTASY REALM THEME ==================== */
+html.fantasy-realm {
+  --font-sans: 'Cinzel', 'Palatino Linotype', serif;
+  --background-color: #1a0b4d;
+  --text-color: #ffffff;
+  --header-bg: #3a0088;
+  --header-dark-bg: #29006c;
+  --card-bg: #2c0169;
+  --card-hover-bg: #390188;
+  --primary-color: #a359ff;
+  --secondary-color: #7928ca;
+  --accent-color: #0070f3;
+  
+  /* Dropdown variables */
+  --dropdown-bg: #2c0169;
+  --dropdown-text: #ffffff;
+  --dropdown-hover-bg: #390188;
+  --dropdown-active-bg: #4601a7;
+}
+
+html.fantasy-realm body {
+  background: linear-gradient(135deg, #1a0b4d 0%, #2c0169 100%);
+  background-image: 
+    radial-gradient(#a359ff 1px, transparent 1px),
+    radial-gradient(#7928ca 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+}
+
+html.fantasy-realm h1,
+html.fantasy-realm h2,
+html.fantasy-realm h3 {
+  color: #a359ff;
+  font-family: 'Cinzel', 'Palatino Linotype', serif;
+  text-shadow: 0 0 10px rgba(163, 89, 255, 0.5);
+}
+
+html.fantasy-realm header {
+  background: linear-gradient(to right, #3a0088, #4e00b9);
+  border-bottom: 1px solid #a359ff;
+  box-shadow: 0 0 20px rgba(163, 89, 255, 0.4);
+}
+
+html.fantasy-realm .card {
+  background: rgba(44, 1, 105, 0.7);
+  border: 1px solid #a359ff;
+  box-shadow: 0 0 15px rgba(163, 89, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+html.fantasy-realm .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(163, 89, 255, 0.2) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+html.fantasy-realm button:not(.theme-button):not(.theme-option) {
+  background: linear-gradient(to right, #3a0088, #4e00b9);
+  color: white;
+  border: 1px solid #a359ff;
+  box-shadow: 0 0 10px rgba(163, 89, 255, 0.3);
+  font-family: 'Cinzel', 'Palatino Linotype', serif;
+}
+
+html.fantasy-realm button:not(.theme-button):not(.theme-option):hover {
+  background: linear-gradient(to right, #4e00b9, #5f00e0);
+  box-shadow: 0 0 15px rgba(163, 89, 255, 0.5);
+}
+
+/* ==================== THEME TRANSITIONS ==================== */
+/* Adding smooth transitions between themes */
+html {
+  transition: background-color 0.5s ease;
+}
+
+body {
+  transition: background 0.5s ease, background-color 0.5s ease, background-image 0.5s ease;
+}
+
+header, .card, button, h1, h2, h3, p, a {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Apply these common variable-based styles to elements */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-bg);
+}
+
+header.dark {
+  background-color: var(--header-dark-bg);
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+.card:hover {
+  background-color: var(--card-hover-bg);
+}
+
+button:not(.theme-button):not(.theme-option) {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
