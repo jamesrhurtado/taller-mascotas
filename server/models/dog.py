@@ -30,16 +30,22 @@ class Dog(BaseModel):
         return self.validate_string_length('Dog name', name, min_length=2)
     
     @validates('gender')
-    def validate_gender(self, key, gender):
+    def validate_gender(self, key: str, gender: str) -> str:
         if gender not in ['Male', 'Female', 'Unknown']:
             raise ValueError("Gender must be 'Male', 'Female', or 'Unknown'")
         return gender
     
     @validates('description')
-    def validate_description(self, key, description):
+    def validate_description(self, key: str, description: str) -> str:
         if description is not None:
             return self.validate_string_length('Description', description, min_length=10, allow_none=True)
         return description
+    
+    @validates('age')
+    def validate_age(self, key: str, age: int) -> int:
+        if age is not None and (age < 0 or age > 20):
+            raise ValueError("Dog age must be between 0 and 20 years")
+        return age
     
     def __repr__(self):
         return f'<Dog {self.name}, ID: {self.id}, Status: {self.status.value}>'
